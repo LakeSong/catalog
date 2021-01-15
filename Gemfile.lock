@@ -96,7 +96,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    loofah (2.8.0)
+    loofah (2.9.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -111,6 +111,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.11.1-x64-mingw32)
       racc (~> 1.4)
+    pg (1.2.3-x64-mingw32)
     public_suffix (4.0.6)
     puma (3.12.6)
     racc (1.5.2)
@@ -183,7 +184,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -219,13 +219,13 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
   kaminari
+  pg
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.4)
   rspec
   sass-rails (~> 5.0)
   selenium-webdriver
   semantic-ui-sass
-  sqlite3
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
