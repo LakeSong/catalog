@@ -1,0 +1,24 @@
+<div class="products-data">
+    <div class="products">
+        <% unless products.empty? %>
+            <div class="sort-by">Sort products by name: 
+                <%= link_to "A-Z", url_for(order: 'ASC') %>/
+                <%= link_to "Z-A", url_for(order: 'DESC') %>
+            </div>
+        <% end %>
+        <div class="ui grid padded">
+            <% products.each do |product| %>
+                <div class="four wide column">
+                    <div class="ui card">
+                        <div class="content">
+                            <%= product.name %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <% unless products.empty? %>
+        <%= paginate products %>
+    <% end %>
+</div>

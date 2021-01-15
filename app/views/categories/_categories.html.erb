@@ -1,0 +1,26 @@
+<div class="categories-data">
+    <div class="title">
+        <% if category.present? %>
+            <% path_name = category.parent_id.present? ? category.parent_category.name : 'Main Categories'%>
+            <% path =  category.parent_id.present? ? category_path(category.parent_id) : categories_path%>
+            <%= link_to path_name, path, class: 'back-link' %>
+            <h1 class="category-name"><%= category.name %></h1>
+        <%else%>
+            <h1>Our Categories</h1>
+        <% end %>
+    </div>
+    
+    <%if categories.present?%>
+    <div class="ui grid padded">
+        <% categories.each do |category| %>
+            <div class="four wide column">
+                <div class="ui card">
+                    <div class="content">
+                        <%= link_to category.name, category_path(category) %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <% end %>
+</div>

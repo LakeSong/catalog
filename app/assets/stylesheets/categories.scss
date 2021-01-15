@@ -1,0 +1,76 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$mainColor: #ad5b5b; 
+
+#main-categories-menu {
+    flex: 0;
+    color: $mainColor;
+    .item {
+        &.active {
+            border-color: $mainColor;
+        }
+
+        a {
+            color: $mainColor;
+        }   
+    }
+}
+
+#catalog {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .categories-data {
+        z-index: 2;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+        .title {
+            color: $mainColor;
+
+            .back-link {
+                border-bottom: 1px solid;
+            }
+        }
+
+        .ui.grid {
+            .content {
+                color:$mainColor;
+            }
+        }
+    }
+
+    .ui.grid {
+        text-align: center;
+
+        .column {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    a {
+        color: $mainColor;
+    }
+}
+
+.back-button {
+    padding: 1em;
+    flex: 0;
+    a {
+        color: black;
+    } 
+}
+
+.title {
+    text-align: center;
+    background: #f3f3f3;
+    padding: 2em;
+
+    .category-name {
+        margin: 0.5em;
+    }
+}
