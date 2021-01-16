@@ -37,6 +37,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'sqlite3'
 end
 
 group :development do
