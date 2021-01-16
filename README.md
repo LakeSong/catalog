@@ -49,4 +49,4 @@ Simple tests to make sure data is valid and controller methods assign correct va
 
 ## Production
 
-Production build is available on Heroku, at https://immense-earth-54793.herokuapp.com/
+Production app is available on Heroku, at https://immense-earth-54793.herokuapp.com/
