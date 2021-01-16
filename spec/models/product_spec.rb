@@ -2,10 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Product, :type => :model do
 
-    category = Category.create(name: "category", parent_id: nil)
     subject {
         described_class.new(name: "product",
-                            category_id: category.id)
+                            category_id: create(:product).id)
       }
 
     it "is valid with valid attributes" do
