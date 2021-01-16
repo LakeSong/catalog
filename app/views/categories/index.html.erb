@@ -1,6 +1,6 @@
-<%= render partial: "main_categories", locals: { main_categories: @main_categories, selected_category: @category } %>
+<%= render partial: "main_categories", locals: { main_categories: @main_categories, selected_category: @category }, cached: true %>
 
 <div id="catalog">
-    <%= render partial: "categories", locals: {categories: @categories, category: @category}, cached: true %>
-    <%= render partial: "products/products", locals: {products: @relevant_products, category: @category}, cached: true %>
+    <%= render partial: "categories", locals: {categories: @categories, category: @category}%>
+    <%= render partial: "products/products", locals: {products: @relevant_products, category: @category} %>
 </div>

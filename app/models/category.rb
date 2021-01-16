@@ -1,8 +1,9 @@
 class Category < ActiveRecord::Base
 
-    has_many :subcategories, class_name: 'Category', foreign_key: 'parent_id', dependent: :destroy
+    has_many :subcategories, class_name: "Category", foreign_key: "parent_id", dependent: :destroy
     has_many :products, dependent: :destroy
-    belongs_to :parent_category, class_name: 'Category', foreign_key: 'parent_id', optional: true
+    belongs_to :parent_category, class_name: "Category", foreign_key: "parent_id", optional: true
+    validates_presence_of :name
 
     class << self
 
@@ -15,12 +16,10 @@ class Category < ActiveRecord::Base
         end
     end
 
-    def get_ancestor_ids ancestors_array = []
-        if self.parent_id.nil?
-            ancestors_array << self.id
-        else
-            self.parent_category.get_ancestor_ids ancestors_array
+    def ancestor_ids ancestors = []
+        if self.parent_id.present?
+            self.parent_category.ancestor_ids ancestors        
         end
-        ancestors_array
+        ancestors << self.id
     end
 end

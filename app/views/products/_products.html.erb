@@ -2,7 +2,7 @@
     <div class="products">
         <% unless products.empty? %>
             <div class="sort-by">Sort products by name: 
-                <%= link_to "A-Z", url_for(order: 'ASC') %>/
+                <%= link_to "A-Z", url_for(order: 'ASC') %> /
                 <%= link_to "Z-A", url_for(order: 'DESC') %>
             </div>
         <% end %>

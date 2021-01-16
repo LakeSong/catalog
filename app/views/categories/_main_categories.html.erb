@@ -1,4 +1,4 @@
-<% ancestors = selected_category.nil? ? [] : selected_category.get_ancestor_ids %>
+<% ancestors = selected_category.nil? ? [] : selected_category.ancestor_ids %>
 
 <div id="main-categories-menu" class="ui secondary pointing menu">
     <% main_categories.each do |category| %>
