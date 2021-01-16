@@ -30,16 +30,34 @@ $mainColor: #ad5b5b;
 
         .title {
             color: $mainColor;
+            text-align: center;
+            background: #f3f3f3;
+            padding: 2em;
 
             .back-link {
                 border-bottom: 1px solid;
+
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+
+            .category-name {
+                margin: 0.5em;
             }
         }
 
         .ui.grid {
-            .content {
-                color:$mainColor;
+            .ui.card {
+                &:hover {
+                    font-weight: bold;
+                }
+
+                .content {
+                    color:$mainColor;
+                }
             }
+        
         }
     }
 
@@ -57,20 +75,3 @@ $mainColor: #ad5b5b;
     }
 }
 
-.back-button {
-    padding: 1em;
-    flex: 0;
-    a {
-        color: black;
-    } 
-}
-
-.title {
-    text-align: center;
-    background: #f3f3f3;
-    padding: 2em;
-
-    .category-name {
-        margin: 0.5em;
-    }
-}
