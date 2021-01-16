@@ -26,7 +26,7 @@ bundle install
 ```
 rake db:migrate db:seed
 ```
-5. Open your browser at [localhost:3000] and check out the catalog!
+5. Open your browser at **localhost:3000** and check out the catalog!
     
 
 ## Running the tests
